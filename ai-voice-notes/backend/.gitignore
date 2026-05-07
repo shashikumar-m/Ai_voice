@@ -1,0 +1,41 @@
+# Backend specific ignores
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment secrets
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite3
+
+# Uploads
+uploads/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Model binary weights (too large for GitHub, re-train locally)
+models/summarizer/model.safetensors
+models/summarizer/pytorch_model.bin
+models/summarizer/optimizer.pt
+models/summarizer/rng_state.pth
+models/summarizer/scheduler.pt
+models/summarizer/training_args.bin
+models/summarizer/checkpoint-*/model.safetensors
+models/summarizer/checkpoint-*/optimizer.pt
+models/summarizer/checkpoint-*/rng_state.pth
+models/summarizer/checkpoint-*/scheduler.pt
+models/summarizer/training_args.bin
+
+# Training logs
+training_log.txt
+
+# Temp audio files
+*_enhanced.wav

@@ -1,0 +1,125 @@
+# ============================================================
+#  AI Voice Notes — Root .gitignore
+# ============================================================
+
+# ── Python / Backend ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# Environment variables — NEVER commit secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Database files — contains user data
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploaded audio/video files
+backend/uploads/
+uploads/
+
+# ── AI Model Files ────────────────────────────────────────────
+# These are large binary files (100MB+), don't push to GitHub
+# Re-download with: python train_summarizer.py
+backend/models/summarizer/model.safetensors
+backend/models/summarizer/pytorch_model.bin
+backend/models/summarizer/optimizer.pt
+backend/models/summarizer/rng_state.pth
+backend/models/summarizer/scheduler.pt
+backend/models/summarizer/training_args.bin
+backend/models/summarizer/checkpoint-*/model.safetensors
+backend/models/summarizer/checkpoint-*/optimizer.pt
+backend/models/summarizer/checkpoint-*/rng_state.pth
+backend/models/summarizer/checkpoint-*/scheduler.pt
+backend/models/summarizer/checkpoint-*/training_args.bin
+
+# Whisper model cache (auto-downloaded on first run)
+.cache/
+~/.cache/whisper/
+
+# Training logs
+backend/training_log.txt
+
+# ── Node.js / Frontend ────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite build output
+website/dist/
+website/dist-ssr/
+website/.vite/
+
+# Frontend env files
+website/.env
+website/.env.local
+website/.env.*.local
+
+# ── IDE & Editor ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+logs/
+*.log.*
+
+# ── OS Files ──────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ── Temp files ────────────────────────────────────────────────
+*.tmp
+*.temp
+*_enhanced.wav
+tmp*/
+temp*/
+
+# ── Flutter (keep source, ignore build) ──────────────────────
+flutter_app/.dart_tool/
+flutter_app/.flutter-plugins
+flutter_app/.flutter-plugins-dependencies
+flutter_app/.packages
+flutter_app/build/
+flutter_app/.pub-cache/
+flutter_app/.pub/
+flutter_app/pubspec.lock
+
+# ── Git ───────────────────────────────────────────────────────
+*.orig
+*.rej
